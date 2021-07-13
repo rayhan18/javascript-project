@@ -1,0 +1,30 @@
+.button{
+    transition: 0.4s;
+}
+.button:hover{
+    background: -moz-linear-gradient(2.5);
+    color: white;
+}
+.hedingStyle{
+    background: palevioletred;
+    color: #f4f3f2;
+    padding: 20px;
+    margin-top: 150px;
+    width: inherit;
+
+}
+.title{
+    color: cornflowerblue;
+    background: aliceblue;
+    padding: 10px;
+    -webkit-box-shadow: 1px 12px 13px 3px rgba(0,0,0,0.69); 
+box-shadow: 1px 12px 13px 3px rgba(0,0,0,0.69);
+}
+a{
+    color: #f8f4f8;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+    color: wheat;
+}
