@@ -1,0 +1,60 @@
+:root{
+    --clr-primary-1: hsl(205, 86%, 17%);
+    --clr-primary-2: hsl(205, 77%, 27%);
+    --clr-primary-3: hsl(205, 72%, 37%);
+    --clr-primary-4: hsl(205, 63%, 48%);
+}
+.reviewimg{
+    width: 200px;
+    box-shadow: 5px 5px 15px rgb(179 168 168);
+    border-radius: 50%;
+}
+.title{
+    text-align: center;
+    margin-top: 50px;
+    color: rebeccapurple;
+}
+.underline {
+    height: 0.25rem;
+    width: 5rem;
+    background:green;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+  }
+  .review {
+    background: gainsboro;
+    padding: 1.5rem 2rem;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgb(179 168 168);
+    transition: ease-in;
+    text-align: center;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+  .review:hover {
+    box-shadow: var(--dark-shadow);
+  }
+
+#author{
+    color: blueviolet;
+    margin-top: 15px;
+    letter-spacing: 7px;
+}
+.prev-btn,
+.next-btn {
+    color: blue;
+    font-size: 1.25rem;
+    background: transparent;
+    border-color: transparent;
+    margin: 0 0.5rem;
+    transition: easy;
+    cursor: pointer;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  color: blueviolet;
+}
