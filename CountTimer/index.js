@@ -1,47 +1,34 @@
-const months = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
-  ];
-  const weekdays = [
-    'Sunday',
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday',
-  ];
-
-  const deadline = document.querySelector('.deadline')
-  const items = document.querySelectorAll('.deadline-format h4')
 
 
-  
-  let tempDate = new Date();
-  let tempYear = tempDate.getFullYear();
-  let tempMonth = tempDate.getMonth();
-  let tempDay = tempDate.getDate();
 
-  const futureDate = new Date(tempYear, tempMonth, tempDay + 10, 11, 30, 0);
- console.log(futureDate)
-// let futureDate = new Date(2020, 3, 24, 11, 30, 0);
 
-const year = futureDate.getFullYear();
-const hours = futureDate.getHours();
-const minutes = futureDate.getMinutes();
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
 
-let month = futureDate.getMonth();
-month = months[month];
-const weekday = weekdays[futureDate.getDay()];
-const date = futureDate.getDate();
-//giveaway.textContent = `giveaway ends on ${weekday}, ${date} ${month} ${year} ${hours}:${minutes}am`;
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+ //console.log(typeof (hours,minutes,seconds))
+  // Display the result in the element with id="demo"
+  document.getElementById("days").innerHTML = days + "Days "  ;
+  //document.getElementById("hours").innerHTML = days + "Days ";
+//  document.getElementsById('hours').innerHTML = hours + "h "
+// document.getElementsById('minite').innerHTML = minutes + "m ";
+// document.getElementsById('second').innerHTML = seconds + "s ";
+//   // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
